@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.taodigitalusa.dto.SearchProduct;
+import com.taodigitalusa.dto.SearchIn;
 import com.taodigitalusa.entity.Product;
-import com.taodigitalusa.repository.CustomProductRepository;
+import com.taodigitalusa.repository.SearchRepository;
 import com.taodigitalusa.service.SearchProductService;
 
 import io.micrometer.common.util.StringUtils;
@@ -19,10 +19,10 @@ public class SearchProductServiceImpl implements SearchProductService {
 	private static final String _00_00_00 = " 00:00:00";
 	
 	@Autowired
-	private CustomProductRepository repo;
+	private SearchRepository repo;
 	
 	@Override
-	public List<Product> search(SearchProduct search) {
+	public List<Product> search(SearchIn search) {
 		StringBuilder query = new StringBuilder("select * from products p ");
 		StringBuilder condition = new StringBuilder();
 		

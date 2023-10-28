@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.taodigitalusa.dto.SearchProduct;
+import com.taodigitalusa.dto.SearchIn;
 import com.taodigitalusa.entity.Product;
 import com.taodigitalusa.service.SearchProductService;
 
@@ -29,10 +29,10 @@ public class SearchProductController {
 	 *   minPostedDate: dd-mm-yyyy
 	 *   maxPostedDate: dd-mm-yyyy	
 	 * }
-	 * @return
+	 * @return List<Product>
 	 */
 	@GetMapping
-	public List<Product> search(@RequestBody SearchProduct search) {
+	public List<Product> search(@RequestBody SearchIn search) {
 		return searchProductService.search(search);
 	}
 }

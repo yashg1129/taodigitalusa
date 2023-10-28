@@ -1,14 +1,6 @@
 package com.taodigitalusa.dto;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import com.taodigitalusa.utils.TaoConstants;
-
-import io.micrometer.common.util.StringUtils;
-
-public class SearchProduct {
+public class SearchIn {
 
 	private String productName;
 	private double minPrice;
